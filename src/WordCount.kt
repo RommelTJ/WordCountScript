@@ -32,5 +32,5 @@ fun main(args: Array<String>) {
     for (word in sortedList) {
         println("${word.first} - ${word.second}")
     }
-    
+
 }
