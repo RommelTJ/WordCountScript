@@ -14,6 +14,7 @@ fun main(args: Array<String>) {
             .replace(".", "")
             .replace("!", "")
             .replace("?", "")
+            .replace("\n", " ")
             .split(" ")
 
     // Get a counted list of all the words.
@@ -22,7 +23,7 @@ fun main(args: Array<String>) {
         if (wordMap.containsKey(word)) {
             val currentCount = wordMap[word]!!
             wordMap[word] = currentCount + 1
-        } else {
+        } else if (word != "") {
             wordMap[word] = 1
         }
     }
