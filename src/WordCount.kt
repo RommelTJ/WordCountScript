@@ -1,6 +1,11 @@
+import java.io.File
+import java.io.InputStream
+
 fun main(args: Array<String>) {
-    // TODO: Read from a file and turn into a string. 
-    val allTheWords = "Hello there, my name is Rommel. I really like to eat cheese and I think this is very good!"
+
+    // Read from a file and turn into a string.
+    val inputStream: InputStream = File("versaceonthefloor-brunomars.txt").inputStream()
+    val allTheWords = inputStream.bufferedReader().use { it.readText() }
 
     // Make a list of all the words separated out.
     val words = allTheWords
@@ -9,6 +14,7 @@ fun main(args: Array<String>) {
             .replace(".", "")
             .replace("!", "")
             .replace("?", "")
+            .replace("\n", " ")
             .split(" ")
 
     // Get a counted list of all the words.
@@ -17,7 +23,7 @@ fun main(args: Array<String>) {
         if (wordMap.containsKey(word)) {
             val currentCount = wordMap[word]!!
             wordMap[word] = currentCount + 1
-        } else {
+        } else if (word != "") {
             wordMap[word] = 1
         }
     }
@@ -32,5 +38,5 @@ fun main(args: Array<String>) {
     for (word in sortedList) {
         println("${word.first} - ${word.second}")
     }
-    
+
 }
