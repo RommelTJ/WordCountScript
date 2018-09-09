@@ -1,10 +1,15 @@
 fun main(args: Array<String>) {
     // TODO: Read from a file and turn into a string. 
-    val allTheWords = "hello there my name is rommel"
+    val allTheWords = "Hello there, my name is Rommel. I really like to eat cheese and I think this is very good!"
 
     // Make a list of all the words separated out.
-    val words = allTheWords.split(" ")
-    println(words.size)
+    val words = allTheWords
+            .toLowerCase()
+            .replace(",", "")
+            .replace(".", "")
+            .replace("!", "")
+            .replace("?", "")
+            .split(" ")
 
     // TODO: Get a counted list of all the words.
     // TODO: Sort the list.
