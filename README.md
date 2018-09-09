@@ -1,6 +1,6 @@
 # WordCountScript
 
-Version: 0.0.1 - 6 Sep 2018
+Version: 1.0.0 - 9 Sep 2018
 
 ## Description
 
