@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
     val wordList = wordMap.toList()
 
     // Sort the list.
-    
+    val sortedList = wordList.sortedWith(compareByDescending({it.second}))
 
     // TODO: Print a sorted list of most popular words.
 }
