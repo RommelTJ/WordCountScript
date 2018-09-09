@@ -11,7 +11,17 @@ fun main(args: Array<String>) {
             .replace("?", "")
             .split(" ")
 
-    // TODO: Get a counted list of all the words.
+    // Get a counted list of all the words.
+    val wordMap = mutableMapOf<String, Int>()
+    for (word in words) {
+        if (wordMap.containsKey(word)) {
+            val currentCount = wordMap[word]!!
+            wordMap[word] = currentCount + 1
+        } else {
+            wordMap[word] = 1
+        }
+    }
+
     // TODO: Sort the list.
     // TODO: Print a sorted list of most popular words.
 }
