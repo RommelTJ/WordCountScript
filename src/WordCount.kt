@@ -22,6 +22,15 @@ fun main(args: Array<String>) {
         }
     }
 
-    // TODO: Sort the list.
-    // TODO: Print a sorted list of most popular words.
+    // Convert map to list
+    val wordList = wordMap.toList()
+
+    // Sort the list.
+    val sortedList = wordList.sortedWith(compareByDescending({it.second}))
+
+    // Print a sorted list of most popular words.
+    for (word in sortedList) {
+        println("${word.first} - ${word.second}")
+    }
+    
 }
