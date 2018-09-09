@@ -1,6 +1,11 @@
+import java.io.File
+import java.io.InputStream
+
 fun main(args: Array<String>) {
-    // TODO: Read from a file and turn into a string. 
-    val allTheWords = "Hello there, my name is Rommel. I really like to eat cheese and I think this is very good!"
+
+    // Read from a file and turn into a string.
+    val inputStream: InputStream = File("versaceonthefloor-brunomars.txt").inputStream()
+    val allTheWords = inputStream.bufferedReader().use { it.readText() }
 
     // Make a list of all the words separated out.
     val words = allTheWords
