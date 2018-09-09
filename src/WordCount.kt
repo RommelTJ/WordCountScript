@@ -28,5 +28,9 @@ fun main(args: Array<String>) {
     // Sort the list.
     val sortedList = wordList.sortedWith(compareByDescending({it.second}))
 
-    // TODO: Print a sorted list of most popular words.
+    // Print a sorted list of most popular words.
+    for (word in sortedList) {
+        println("${word.first} - ${word.second}")
+    }
+    
 }
