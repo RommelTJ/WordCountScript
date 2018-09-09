@@ -22,6 +22,11 @@ fun main(args: Array<String>) {
         }
     }
 
-    // TODO: Sort the list.
+    // Convert map to list
+    val wordList = wordMap.toList()
+
+    // Sort the list.
+    
+
     // TODO: Print a sorted list of most popular words.
 }
